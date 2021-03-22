@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<!--Commentaras-->
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center mt-5">Todo List</h2>
+                <form id="todo-form" class="row g-2 justify-content-center mt-3 needs-validation">
+                    <div class="col-4">
+                        <div class="input-group has-validation"></div>
+                        <input type="text" name="task" class="form-control" id="todo-input" placeholder="Enter a task" required>
+                        <div class="invalid-feedback">
+                            Please enter a task
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary mb-3 px-4">Add</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 mt-4">
+                <div class="row justify-content-center">
+                    <div id="todos" class="col-4">
+                        <h3 class="text-center border-bottom border-2 pb-2 mb-3">Todo</h3>
+                    </div>
+                    <div id="dones" class="col-4">
+                        <h3 class="text-center border-bottom border-2 pb-2 mb-3">Done</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <template id="todo-task-template">
+        <div class="card mb-2">
+            <div class="card-body">
+                <h5 class="task-title">Uzduoties pavadinimas</h5>
+                <button type="button" class="btn btn-danger delete-button">Delete</button>
+                <button type="button" class="btn btn-success move-button">Move to Done</button>
+            </div>
+        </div>
+    </template>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <script src="main.js"></script>
+</body>
+
+</html>
